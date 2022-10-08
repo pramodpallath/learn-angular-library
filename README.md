@@ -10,3 +10,9 @@ ng generate application ppv-library-demo
 ```
 2. Also cleaned up the app.component.html and made it look as i wanted
 
+
+3. Create the most basic library
+   
+   ```
+   ng generate library pv-the-most-basic-ng-library
+   ```

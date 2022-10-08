@@ -96,6 +96,37 @@
           }
         }
       }
+    },
+    "pv-the-most-basic-ng-library": {
+      "projectType": "library",
+      "root": "projects/pv-the-most-basic-ng-library",
+      "sourceRoot": "projects/pv-the-most-basic-ng-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pv-the-most-basic-ng-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pv-the-most-basic-ng-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pv-the-most-basic-ng-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pv-the-most-basic-ng-library/src/test.ts",
+            "tsConfig": "projects/pv-the-most-basic-ng-library/tsconfig.spec.json",
+            "karmaConfig": "projects/pv-the-most-basic-ng-library/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }
